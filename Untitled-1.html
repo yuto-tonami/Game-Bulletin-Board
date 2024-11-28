@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゲーム掲示板</title>
-    <link rel="stylesheet" href="style.css">
+    <title>掲示板</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div id="header">
-            <div class="platform-switch">プラットフォームごとに切り替え機能</div>
-            <div class="search-bar">検索部分</div>
-        </div>
+        <h1>掲示板</h1>
     </header>
     <main>
-        <div id="content">
-            <div class="dropdown-menu">他のゲームのプルダウンメニュー</div>
-            <div class="announcement">お知らせ欄</div>
-            <div class="chat-box">コメントなどができるチャット欄</div>
-            <div class="game-list">攻略したいゲーム一覧</div>
-        </div>
+        <section id="posts">
+            <!-- 投稿一覧がここに表示される -->
+        </section>
+        <section id="form-section">
+            <h2>新しい投稿を追加</h2>
+            <form id="post-form">
+                <textarea name="content" id="content" rows="5" placeholder="ここに投稿内容を入力してください..." required></textarea>
+                <button type="submit">投稿する</button>
+            </form>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
