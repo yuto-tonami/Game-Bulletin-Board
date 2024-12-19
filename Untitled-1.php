@@ -51,3 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     exit;
 }
 ?>
+<?php
+$posts = file_get_contents('posts.txt');
+$posts = nl2br(htmlspecialchars($posts, ENT_QUOTES, 'UTF-8'));
+?>
+
+<div id="posts">
+  <?= $posts ?>
+</div>

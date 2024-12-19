@@ -15,10 +15,55 @@
         </nav>
     </header>
     <main>
-        <section id="post-list">
-            <!-- 投稿一覧がここに動的に表示される -->
+        <section id="posts">
+            <!-- 投稿一覧がここに表示される -->
         </section>
+        <section id="form-section">
+            <h2>新しい投稿を追加</h2>
+            <form id="post-form">
+                <textarea name="content" id="content" rows="5" placeholder="ここに投稿内容を入力してください..." required></textarea>
+                <button type="submit">投稿する</button>
+                <aside>
+                    <h2>投稿する際の注意:</h2>
+                    <details>
+                      <summary>投稿内容について</summary>
+                      <p>自分や他人の氏名、住所、電話番号、メールアドレスなどを安易に公開することは危険です。個人情報を公開する場合は十分に注意しましょう。特定の個人や企業、製品・サービスについての誹謗中傷（事実無根のデマや、事実を大きく逸脱した批判的な体験談など）をすることは禁止しています。特定の民族、国家、宗教団体や思想団体などへの一方的な差別的発言も禁止です。対象が一部伏せ字（例：サイ○ー○ーム）であったとしても、内容が容易に推測できると判断された場合は同様です。</p>
+                    </details>
+                    <details>
+                      <summary>信憑性について</summary>
+                      <p>掲示板には、明らかに事実と異なった情報が書き込まれる場合もあります。情報の確認や判断はあくまで自己責任で行ってください。</p>
+                    </details>
+                    <details>
+                      <summary>どんなことを書いたら良いのか分からないのですが…</summary>
+                      <p>最低限のマナーを踏まえた内容であれば、どんなことを書いてもOKです。
+                        「おもしろかったゲームの紹介」や「ゲームの攻略」などでも構いません。
+                    <span style="font-family:Arial;vertical-align:baseline;"></p>
+                    
+                    </details>
+                      </aside>
+                    
+            </form>
+        </section>
+        <template id="star-rating-template">
+            <form>
+           <fieldset>
+             <legend>この投稿サイトの評価は：</legend>
+              <rating>
+                <input type="radio" name="rating" value="1" aria-label="1 star" required/>
+                <input type="radio" name="rating" value="2" aria-label="2 stars"/>
+                <input type="radio" name="rating" value="3" aria-label="3 stars"/>
+                <input type="radio" name="rating" value="4" aria-label="4 stars"/>
+                <input type="radio" name="rating" value="5" aria-label="5 stars"/>
+              </rating>
+             </fieldset>
+             <button type="reset">リセット</button>
+             <button type="submit">評価</button>
+         </form>
+         </template>
+         <div id="foo"></div>
+         <div id="bar"></div>
     </main>
+    <script src="script.js"></script>
     <script src="list.js"></script>
 </body>
 </html>

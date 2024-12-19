@@ -31,3 +31,25 @@ foreach ($posts as $p) {
         <?php else: ?>
             <p>指定された投稿が見つかりません。</p>
         <?php endif; ?>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $name = $_POST['name'];
+  $comment = $_POST['comment'];
+  $time = date('Y-m-d H:i:s');
+  $post = $time . ' - ' . $name . ': ' . $comment . "\n";
+  file_put_contents('posts.txt', $post, FILE_APPEND);
+  header('Location: ' . $_SERVER['REQUEST_URI']);
+  exit;
+}
+?>
+
+<?php
+    $posts = file_get_contents('posts.txt');
+    $posts = nl2br(htmlspecialchars($posts, ENT_QUOTES, 'UTF-8'));
+?>
+
+<div id="posts">
+  <?= $posts ?>
+</div>
+        

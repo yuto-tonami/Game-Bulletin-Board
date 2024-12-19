@@ -134,3 +134,64 @@ h2 {
         width: 95%;
     }
 }
+
+rating {
+    display: inline-flex;
+  } 
+
+input[type=radio]{ 
+  appearance: none;
+  margin: 0;
+  box-shadow: none; 
+}
+
+/* generated content is supported on input. */
+input[type=radio]::after {
+  content: '\2605';
+  font-size: 32px;
+}
+
+/* by default, if no value is selected, all stars are grey */
+input[type=radio]:invalid::after {
+  color: #ddd;
+}
+
+/* if the rating has focus or is hovered, make all stars darker */
+rating:hover input[type=radio]:invalid::after,
+rating:focus-within input[type=radio]:invalid::after
+{color: #888;}
+
+/* make all the stars after the focused one light grey, until a value is selected */
+rating:hover input[type=radio]:hover ~ input[type=radio]:invalid::after,
+rating input[type=radio]:focus ~ input[type=radio]:invalid::after  {color: #ddd;}
+
+
+/* if a value is selected, make them all selected */
+rating input[type=radio]:valid {
+  color: orange;
+}
+/* then make the ones coming after the selected value look inactive */
+rating input[type=radio]:checked ~ input[type=radio]:not(:checked)::after{
+  color: #ccc;
+  content: '\2606'; /* optional. hollow star */
+}
+@layer setupPage;
+
+details {
+  border: 1px solid;
+  padding: 0 1rem;
+  background: white;
+}
+details + details {
+  border-top: none;
+}
+details[open] {
+    padding-bottom: 1em;
+}  
+summary {
+  padding: 1rem 2em 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
