@@ -24,9 +24,9 @@
                 <textarea name="content" id="content" rows="5" placeholder="ここに投稿内容を入力してください..." required></textarea>
                 <button type="submit">投稿する</button>
                 <aside>
-                    <h2>投稿する際の注意:</h2>
+                    <h2>投稿一覧:</h2>
                     <details>
-                      <summary>投稿内容について</summary>
+                      <summary>投稿一覧</summary>
                       <p>自分や他人の氏名、住所、電話番号、メールアドレスなどを安易に公開することは危険です。個人情報を公開する場合は十分に注意しましょう。特定の個人や企業、製品・サービスについての誹謗中傷（事実無根のデマや、事実を大きく逸脱した批判的な体験談など）をすることは禁止しています。特定の民族、国家、宗教団体や思想団体などへの一方的な差別的発言も禁止です。対象が一部伏せ字（例：サイ○ー○ーム）であったとしても、内容が容易に推測できると判断された場合は同様です。</p>
                     </details>
                     <details>
@@ -40,7 +40,7 @@
                     <span style="font-family:Arial;vertical-align:baseline;"></p>
                     
                     </details>
-                      </aside>
+                </aside>
                     
             </form>
         </section>
@@ -58,7 +58,8 @@
              </fieldset>
              <button type="reset">リセット</button>
              <button type="submit">評価</button>
-         </form>
+             <button onclick="showalert()">評価されました</button>  
+            </form>
          </template>
          <div id="foo"></div>
          <div id="bar"></div>
