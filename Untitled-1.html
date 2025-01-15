@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>掲示板</title>
+    <title>ゲーム攻略サイト</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>掲示板</h1>
+    <header class="header">
+        <h1>ゲーム攻略サイト</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="C:\プロジェクト演習\Untitled-1.html">ホーム</a></li>
+                <li><a href="https://www.famitsu.com/ranking/game-sales/last-week">人気ランキング</a></li>
+                <li><a href="http://localhost:8080/board/">ゲームの掲示板</a></li>
+                <li><a href="C:\プロジェクト演習\index.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="posts">
-            <!-- 投稿一覧がここに表示される -->
+
+    <main class="main-content">
+        <section class="featured">
+            <h2>注目の攻略</h2>
+            <article class="guide">
+                <h3>スーパーマリオパーティ攻略</h3>
+                <p>スーパーマリオパーティの隠しキャラの出し方・隠し要素完全攻略！</p>
+                <a href="https://kou-ryaku.net/SuperMarioParty/%E9%9A%A0%E3%81%97%E3%82%AD%E3%83%A3%E3%83%A9" class="read-more">続きを読む</a>
+            </article>
+            <article class="guide">
+                <h3>ゼルダの伝説 神々のトライフォース</h3>
+                <p>ゼルダシリーズの名作、神々のトライフォースの攻略情報を詳しく解説。</p>
+                <a href="https://zelda.opatil.com/" class="read-more">続きを読む</a>
+            </article>
         </section>
-        <section id="form-section">
-            <h2>新しい投稿を追加</h2>
-            <form id="post-form">
-                <textarea name="content" id="content" rows="5" placeholder="ここに投稿内容を入力してください..." required></textarea>
-                <button type="submit">投稿する</button>
-            </form>
+
+        <section class="new-guides">
+            <h2>新着攻略記事</h2>
+            <ul class="guide-list">
+                <li class="guide-item">
+                    <h3>ファイナルファンタジーVII リメイク攻略</h3>
+                    <p>ストーリー進行やボス戦の攻略情報はこちら！</p>
+                </li>
+                <li class="guide-item">
+                    <h3>モンスターハンターライズ: サンブレイク</h3>
+                    <p>効率的な素材集めと装備強化のコツを紹介。</p>
+                </li>
+            </ul>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2024 ゲーム攻略サイト</p>
+    </footer>
 </body>
 </html>
